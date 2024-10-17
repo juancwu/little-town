@@ -1,0 +1,151 @@
+[gd_scene load_steps=13 format=4 uid="uid://dfj3krkutymow"]
+
+[ext_resource type="Texture2D" uid="uid://ddpaqh7mpc75q" path="res://assets/Terrain/Water/Water.png" id="1_a7k8q"]
+[ext_resource type="Texture2D" uid="uid://4tmp8y6ts4si" path="res://assets/Terrain/Ground/Tilemap_Flat.png" id="1_md0ik"]
+[ext_resource type="Texture2D" uid="uid://clbb5j3heeadm" path="res://assets/Terrain/Ground/Tilemap_Elevation.png" id="2_adp4y"]
+[ext_resource type="Texture2D" uid="uid://ck06mpkpe3dy6" path="res://assets/Terrain/Water/Foam/Foam.png" id="2_utcct"]
+[ext_resource type="Texture2D" uid="uid://djajf7rcbc5t0" path="res://assets/Terrain/Ground/Shadows.png" id="3_bh6t0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5bb20"]
+texture = ExtResource("1_a7k8q")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksrwr"]
+texture = ExtResource("2_utcct")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_columns = 8
+0:0/animation_frame_0/duration = 0.1
+0:0/animation_frame_1/duration = 0.1
+0:0/animation_frame_2/duration = 0.1
+0:0/animation_frame_3/duration = 0.1
+0:0/animation_frame_4/duration = 0.1
+0:0/animation_frame_5/duration = 0.1
+0:0/animation_frame_6/duration = 0.1
+0:0/animation_frame_7/duration = 0.1
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rsd0g"]
+tile_size = Vector2i(64, 64)
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_5bb20")
+sources/3 = SubResource("TileSetAtlasSource_ksrwr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6bns"]
+texture = ExtResource("1_md0ik")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_51jjv"]
+texture = ExtResource("2_adp4y")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xi3n8"]
+texture = ExtResource("3_bh6t0")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uu3ly"]
+tile_size = Vector2i(64, 64)
+uv_clipping = true
+sources/1 = SubResource("TileSetAtlasSource_k6bns")
+sources/3 = SubResource("TileSetAtlasSource_51jjv")
+sources/4 = SubResource("TileSetAtlasSource_xi3n8")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapWater" type="TileMapLayer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+tile_map_data = PackedByteArray("AAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAADAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_rsd0g")
+
+[node name="TileMapWater2" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAJAAUAAwAAAAAAAAAJAAQAAwAAAAAAAAAIAAUAAwAAAAAAAAAHAAUAAwAAAAAAAAAGAAUAAwAAAAAAAAAFAAUAAwAAAAAAAAAEAAUAAwAAAAAAAAADAAUAAwAAAAAAAAACAAUAAwAAAAAAAAABAAUAAwAAAAAAAAABAAQAAwAAAAAAAAABAAMAAwAAAAAAAAACAAMAAwAAAAAAAAADAAMAAwAAAAAAAAAEAAMAAwAAAAAAAAAFAAMAAwAAAAAAAAAGAAIAAwAAAAAAAAAGAAEAAwAAAAAAAAAGAAAAAwAAAAAAAAAHAAAAAwAAAAAAAAAIAAAAAwAAAAAAAAAJAAAAAwAAAAAAAAAJAAEAAwAAAAAAAAAJAAIAAwAAAAAAAAAJAAMAAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_rsd0g")
+
+[node name="TileMapGround" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAQAAQAAAAEAAAABAAUAAQAAAAIAAAACAAUAAQABAAIAAAADAAUAAQABAAIAAAAEAAUAAQABAAIAAAAFAAUAAQABAAIAAAAGAAUAAQABAAIAAAAHAAUAAQABAAIAAAAIAAUAAQABAAIAAAAJAAUAAQACAAIAAAAJAAQAAQACAAEAAAAJAAMAAQACAAEAAAAJAAIAAQACAAEAAAAJAAEAAQACAAEAAAAJAAAAAQACAAAAAAAIAAAAAQABAAAAAAAHAAAAAQABAAAAAAAGAAAAAQAAAAAAAAAEAAMAAQABAAAAAAAGAAEAAQAAAAEAAAAHAAEAAQABAAEAAAAIAAEAAQABAAEAAAAIAAIAAQABAAEAAAAIAAMAAQABAAEAAAAIAAQAAQABAAEAAAAHAAQAAQABAAEAAAAGAAQAAQABAAEAAAAFAAQAAQABAAEAAAAEAAQAAQABAAEAAAADAAQAAQABAAEAAAACAAQAAQABAAEAAAAFAAMAAQABAAAAAAAGAAMAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAGAAIAAQAAAAEAAAABAAMAAQAAAAAAAAACAAMAAQABAAAAAAADAAMAAQABAAAAAAA=")
+tile_set = SubResource("TileSet_uu3ly")
+
+[node name="TileMapHill" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAMAAwAAAAUAAAACAAMAAwABAAUAAAADAAIAAwACAAQAAAADAAMAAwACAAUAAAACAAIAAwABAAQAAAABAAIAAwAAAAQAAAA=")
+tile_set = SubResource("TileSet_uu3ly")
+
+[node name="TileMapGround2" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAIAAwAAAAUAAAACAAIAAwACAAUAAAACAAEAAwACAAQAAAABAAEAAwAAAAQAAAA=")
+tile_set = SubResource("TileSet_uu3ly")
+
+[node name="TileMapGround3" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAAEAAQAAAAMAAAACAAEAAQACAAMAAAADAAIAAQACAAMAAAA=")
+tile_set = SubResource("TileSet_uu3ly")
+
+[node name="TileMapGround4" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAADAAIABAACAAEAAAACAAIAAQAEAAAAAAABAAMAAQAEAAAAAAA=")
+tile_set = SubResource("TileSet_uu3ly")
