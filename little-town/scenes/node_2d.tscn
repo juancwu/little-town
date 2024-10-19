@@ -118,7 +118,7 @@ sources/1 = SubResource("TileSetAtlasSource_k6bns")
 sources/3 = SubResource("TileSetAtlasSource_51jjv")
 sources/4 = SubResource("TileSetAtlasSource_xi3n8")
 
-[node name="Node2D" type="Node2D"]
+[node name="test-platform" type="Node2D"]
 
 [node name="TileMapWater" type="TileMapLayer" parent="."]
 texture_filter = 1
