@@ -1,9 +1,10 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cqdm5dvueg8yq"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://cqdm5dvueg8yq"]
 
 [ext_resource type="Texture2D" uid="uid://coy12gy23sqiu" path="res://assets/Resources/Trees/Tree.png" id="1_vw1gx"]
 [ext_resource type="Texture2D" uid="uid://4tmp8y6ts4si" path="res://assets/Terrain/Ground/Tilemap_Flat.png" id="2_tbp0r"]
 [ext_resource type="Texture2D" uid="uid://clbb5j3heeadm" path="res://assets/Terrain/Ground/Tilemap_Elevation.png" id="3_7qpxg"]
 [ext_resource type="Texture2D" uid="uid://djajf7rcbc5t0" path="res://assets/Terrain/Ground/Shadows.png" id="4_qlknq"]
+[ext_resource type="Texture2D" uid="uid://d4jsh7xe6u5mk" path="res://assets/Resources/Trees/Tree_Row.png" id="5_226y4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4kle"]
 texture = ExtResource("1_vw1gx")
@@ -101,6 +102,19 @@ texture_region_size = Vector2i(64, 64)
 2:1/0 = 0
 1:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_balno"]
+texture = ExtResource("5_226y4")
+texture_region_size = Vector2i(64, 64)
+0:0/size_in_atlas = Vector2i(3, 3)
+0:0/animation_columns = 6
+0:0/animation_frame_0/duration = 0.1
+0:0/animation_frame_1/duration = 0.1
+0:0/animation_frame_2/duration = 0.1
+0:0/animation_frame_3/duration = 0.1
+0:0/animation_frame_4/duration = 0.1
+0:0/animation_frame_5/duration = 0.1
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(64, 64)
 uv_clipping = true
@@ -108,3 +122,4 @@ sources/1 = SubResource("TileSetAtlasSource_k6bns")
 sources/3 = SubResource("TileSetAtlasSource_51jjv")
 sources/4 = SubResource("TileSetAtlasSource_xi3n8")
 sources/0 = SubResource("TileSetAtlasSource_q4kle")
+sources/5 = SubResource("TileSetAtlasSource_balno")
