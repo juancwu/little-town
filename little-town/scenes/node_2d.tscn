@@ -40,3 +40,5 @@ tile_set = ExtResource("2_kddie")
 position = Vector2(256, 128)
 tile_map_data = PackedByteArray("AAADAAIABAACAAEAAAACAAIAAQAEAAAAAAABAAMAAQAEAAAAAAACAAAAAAAAAAAAAAA=")
 tile_set = ExtResource("2_kddie")
+
+[node name="Area2D" type="Area2D" parent="."]
