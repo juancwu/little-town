@@ -25,6 +25,8 @@ func move(delta):
 		anim.play("idle")
 		apply_friction(FRICTION * delta)
 	else:
+		# flip sprite if going left
+		anim.flip_h = axis.x < 0
 		anim.play("move")
 		apply_movement(axis * ACCELERATION * delta)
 	move_and_slide()
