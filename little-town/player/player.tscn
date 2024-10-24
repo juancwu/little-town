@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://cj73vihditvxi"]
+
+[ext_resource type="Texture2D" uid="uid://joo351gbyhx4" path="res://assets/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_7ag6u"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_groru"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5u32"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7git"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uabmc"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iklqp"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjb62"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqtre"]
+atlas = ExtResource("1_7ag6u")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bst1p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5u32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7git")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uabmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iklqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjb62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqtre")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32qcd"]
+radius = 40.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_groru")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bst1p")
+animation = &"idle"
+frame = 2
+frame_progress = 0.885078
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_32qcd")

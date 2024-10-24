@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://brei43jxwjhrc"]
+[gd_scene load_steps=16 format=3 uid="uid://brei43jxwjhrc"]
 
 [ext_resource type="Texture2D" uid="uid://joo351gbyhx4" path="res://assets/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_elnnp"]
 
@@ -99,10 +99,17 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8q7aw"]
+radius = 31.0
+
 [node name="Player" type="Area2D"]
-position = Vector2(572, 772)
+position = Vector2(588, 767)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2nskw")
 animation = &"idle"
+frame_progress = 0.408935
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8q7aw")
