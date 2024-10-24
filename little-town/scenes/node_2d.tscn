@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://dfj3krkutymow"]
+[gd_scene load_steps=4 format=4 uid="uid://dfj3krkutymow"]
 
 [ext_resource type="TileSet" uid="uid://bcss36yugvgtd" path="res://resources/water.tres" id="1_58xqb"]
 [ext_resource type="TileSet" uid="uid://cqdm5dvueg8yq" path="res://resources/ground.tres" id="2_kddie"]
+[ext_resource type="PackedScene" uid="uid://cj73vihditvxi" path="res://player/player.tscn" id="3_dmk4n"]
 
 [node name="test-platform" type="Node2D"]
 
@@ -40,3 +41,11 @@ tile_set = ExtResource("2_kddie")
 position = Vector2(256, 128)
 tile_map_data = PackedByteArray("AAADAAIABAACAAEAAAACAAIAAQAEAAAAAAABAAMAAQAEAAAAAAACAAAAAAAAAAAAAAA=")
 tile_set = ExtResource("2_kddie")
+
+[node name="Player" parent="." instance=ExtResource("3_dmk4n")]
+position = Vector2(744, 336)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(104, 160, 984, 608, 888, 480)
